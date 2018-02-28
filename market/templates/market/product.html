@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'market/style.css' %}" />
+    <meta charset="utf-8">
+    <title>my market</title>
+  </head>
+  <body>
+
+
+<div class="main">
+    <h1 class="item-title">{{ product_spec.product.name }}</h1>
+  <ul class="nav-bar">
+
+    <li class="nav-item"><a href="#">Описание</a></li>
+    <li class="nav-item"><a href="#">Характеристики</a></li>
+    <li class="nav-item"><a href="#">Модификации</a></li>
+    <li class="nav-item"><a href="#">Цены</a></li>
+    <li class="nav-item"><a href="#">Карта</a></li>
+    <li class="nav-item"><a href="#">Отзывы</a></li>
+    <li class="nav-item"><a href="#">Обзоры</a></li>
+    <li class="nav-item"><a href="#">Обсуждения</a></li>
+
+  </ul>
+
+  <div class="itemsummary">
+    <div class="summary-col-1">
+        <ul class="thumbnail-list">
+          <li class="thumbnail-item">
+            {% load static %}
+            <img class="Image" src="{% static product_spec.imgpath %}" alt="">
+          </li>
+          <li class="thumbnail-item">
+            {% load static %}
+            <img class="thumbnail-image" src="{% static product_spec.imgpath %}" alt="">
+          </li>
+          <li class="thumbnail-item">
+            {% load static %}
+            <img class="thumbnail-image" src="img/271.970.jpg" alt="">
+          </li>
+        </ul>
+        <div class="detail-image-frame">
+          {% load static %}
+          <img class="Image" src="{% static product_spec.imgpath %}"/>
+        </div>
+    </div>
+    <div class="summary-col-2">
+      <div class="size-wrap">
+        <select id="size" class="size" name="">
+          <option value="">Выберите нужные параметры</option>
+        </select>
+      </div>
+      <div class="product-description">
+        <h3 class="product-description-title">Коротко о товаре</h3>
+        <ul>
+          <li class="product-description-item" >Процессор: {{ product_spec.cpu }}</li>
+          <li class="product-description-item">Частота процессора: {{ product_spec.cpufrequency }} МГц</li>
+          <li class="product-description-item">Объем оперативной памяти: {{ product_spec.ram }} Гб</li>
+          <li class="product-description-item">Объем жесткого диска: {{ product_spec.hdd }} Гб</li>
+          <li class="product-description-item">Bluetooth: есть</li>
+          <li class="product-description-item">Wi-Fi: есть</li>
+        </ul>
+      </div>
+    </div>
+    <div class="summary-col-3">
+      <div class="price-col">
+        <div class="price">
+          <span>{{ product_spec.product.price }}&#8381;</span>
+        </div>
+        <div class="delivery">
+          <span>Из России, срок и стоимость доставки уточняйте при заказе</span>
+        </div>
+
+        <div class="color">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>
