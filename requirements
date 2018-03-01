@@ -1,0 +1,8 @@
+Django==2.0.2
+django-configurations==2.0
+django-extensions==2.0.0
+Jinja2==2.10
+MarkupSafe==1.0
+pytz==2018.3
+six==1.11.0
+typing==3.6.4
