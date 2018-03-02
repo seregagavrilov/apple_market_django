@@ -1,6 +1,6 @@
 import os
-
 from configurations import Configuration, values
+
 
 class MiddlewareConfigMixin:
     MIDDLEWARE = [
@@ -11,6 +11,7 @@ class MiddlewareConfigMixin:
         'django.contrib.auth.middleware.AuthenticationMiddleware',
         'django.contrib.messages.middleware.MessageMiddleware',
         'django.middleware.clickjacking.XFrameOptionsMiddleware',
+        'debug_toolbar.middleware.DebugToolbarMiddleware',
     ]
 
 
@@ -38,6 +39,7 @@ class Base(MiddlewareConfigMixin, Configuration):
         'django.contrib.messages',
         'django.contrib.staticfiles',
         'django_extensions',
+        'debug_toolbar',
         'market',
     ]
 
