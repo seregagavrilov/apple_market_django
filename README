@@ -32,3 +32,4 @@ site will be starting run on localhost and will write you some thing like:
 ```
  * Serving Flask app "market"
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ ```
