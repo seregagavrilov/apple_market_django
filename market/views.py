@@ -4,7 +4,6 @@ from .models import Product, Specification
 
 
 def index(request):
-    print('hi')
     products = Product.objects.all()
     context = {'products': products}
     return render(request, 'market/index.html', context)

@@ -107,5 +107,4 @@ class Base(MiddlewareConfigMixin, Configuration):
     STATIC_URL = '/static/'
 
 class Dev(Base):
-
-    DEBUG = values.BooleanValue(True)
+    DEBUG = True
